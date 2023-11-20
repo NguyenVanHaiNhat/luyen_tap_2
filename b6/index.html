@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let rows = 6;
+
+  for (let i = 0; i < rows; i++) {
+    for (let j = 0; j <= rows; j++) {
+      // Upper left triangle
+      if ((i <= rows / 2 - 1 && j >= rows / 2 - i && j <= rows / 2 + i) ||
+              // Lower left triangle
+              (i >= rows / 2 && j >= i - rows / 2 && j <= rows - (i - rows / 2))) {
+        document.write('*');
+      } else {
+        document.write(' ');
+      }
+    }
+    console.log();
+  }
+</script>
+</body>
+</html>
